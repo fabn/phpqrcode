@@ -1,0 +1,12 @@
+* 1.0.0 build 2010031920 
+
+  - first public release
+  - help in readme, install
+  - cleanup ans separation of QRtools and QRspec
+  - now TCPDF binding requires minimal changes in TCPDF, having most of job
+    done in QRtools tcpdfBarcodeArray
+  - nicer QRtools::timeBenchmark output
+  - license and copyright notices in files
+  - indent cleanup - from tab to 4spc, keep it that way please :)
+  - sf project, repository, wiki
+  - simple code generator in index.php
