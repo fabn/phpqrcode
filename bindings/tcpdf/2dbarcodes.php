@@ -115,7 +115,7 @@ class TCPDF2DBarcode {
 			case 'QR': {
 			
 					$PHPQRLIB_DIR = dirname(__FILE__).DIRECTORY_SEPARATOR;
-					include $PHPQRLIB_DIR.'phpqrcode'.DIRECTORY_SEPARATOR.'qrlib.php';
+					include $PHPQRLIB_DIR.'phpqrcode.php';
 					
 					$this->barcode_array = QRtools::tcpdfBarcodeArray($code, $type);
 						
