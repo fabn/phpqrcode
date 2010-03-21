@@ -10,3 +10,9 @@
   - indent cleanup - from tab to 4spc, keep it that way please :)
   - sf project, repository, wiki
   - simple code generator in index.php
+  
+* 1.1.0 build 2010032113
+
+  - added merge tool wich generate merged version of code
+    located in phpqrcode.php
+  - splited qrconst.php from qrlib.php
