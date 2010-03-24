@@ -5,7 +5,7 @@
  * Image output of code using GD2
  *
  * PHP QR Code is distributed under LGPL 3
- * Copyright (C) 2010 Dominik Dzienia <deltalab at poczta dot f>
+ * Copyright (C) 2010 Dominik Dzienia <deltalab at poczta dot fm>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -27,7 +27,7 @@
     class QRimage {
     
         //----------------------------------------------------------------------
-        public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4) 
+        public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE) 
         {
             $image = self::image($frame, $pixelPerPoint, $outerFrame);
             
@@ -35,7 +35,13 @@
                 Header("Content-type: image/png");
                 ImagePng($image);
             } else {
-                ImagePng($image, $filename);
+                if($saveandprint===TRUE){
+                    ImagePng($image, $filename);
+                    header("Content-type: image/png");
+                    ImagePng($image);
+                }else{
+                    ImagePng($image, $filename);
+                }
             }
             
             ImageDestroy($image);

@@ -8,7 +8,7 @@
  * MAKE SURE THAT RESULTING PHPQRCode.php (and its dir) ARE WRITABLE!
  *
  * PHP QR Code is distributed under LGPL 3
- * Copyright (C) 2010 Dominik Dzienia <deltalab at poczta dot f>
+ * Copyright (C) 2010 Dominik Dzienia <deltalab at poczta dot fm>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -33,20 +33,21 @@
     // Required libs
     
     $fileList = array(
-        $QR_BASEDIR."qrconst.php",
-        $QR_TOOLSDIR."merged_config.php",
-        $QR_BASEDIR."qrtools.php",
-        $QR_BASEDIR."qrspec.php",
-        $QR_BASEDIR."qrimage.php",
-        $QR_BASEDIR."qrinput.php",
-        $QR_BASEDIR."qrbitstream.php",
-        $QR_BASEDIR."qrsplit.php",
-        $QR_BASEDIR."qrrscode.php",
-        $QR_BASEDIR."qrmask.php",
-        $QR_BASEDIR."qrencode.php"
+        $QR_BASEDIR.'qrconst.php',
+        $QR_TOOLSDIR.'merged_config.php',
+        $QR_BASEDIR.'qrtools.php',
+        $QR_BASEDIR.'qrspec.php',
+        $QR_BASEDIR.'qrimage.php',
+        $QR_BASEDIR.'qrinput.php',
+        $QR_BASEDIR.'qrbitstream.php',
+        $QR_BASEDIR.'qrsplit.php',
+        $QR_BASEDIR.'qrrscode.php',
+        $QR_BASEDIR.'qrmask.php',
+        $QR_BASEDIR.'qrencode.php'
     );
     
-    $headerFile = $QR_TOOLSDIR."merged_header.php";
+    $headerFile = $QR_TOOLSDIR.'merged_header.php';
+    $versionFile = $QR_BASEDIR.'VERSION';
     
     $outputCode = '';
     
@@ -58,6 +59,12 @@
         $outputCode .= "\n\n".$anotherCode."\n\n";
     }
     
-    file_put_contents($outputFile, file_get_contents($headerFile ).$outputCode);
+	$versionDataEx = explode("\n", file_get_contents($versionFile));
+	
+    $outputContents = file_get_contents($headerFile);
+    $outputContents .= "\n\n/*\n * Version: ".trim($versionDataEx[0])."\n * Build: ".trim($versionDataEx[1])."\n */\n\n";
+    $outputContents .= $outputCode;
+    
+    file_put_contents($outputFile, $outputContents);
     
     

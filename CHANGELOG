@@ -16,3 +16,10 @@
   - added merge tool wich generate merged version of code
     located in phpqrcode.php
   - splited qrconst.php from qrlib.php
+  
+* 1.1.1 build 2010032405
+
+  - patch by Rick Seymour allowing saving PNG and displaying it at the same time
+  - added version info in VERSION file
+  - modified merge tool to include version info into generated file
+  - fixed e-mail in almost all head comments
