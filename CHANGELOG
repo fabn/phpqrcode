@@ -23,3 +23,8 @@
   - added version info in VERSION file
   - modified merge tool to include version info into generated file
   - fixed e-mail in almost all head comments
+  
+* 1.1.2 build 2010032722
+
+  - full integration with TCPDF thanks to Nicola Asuni, it's author
+  - fixed bug with alphanumeric encoding detection

@@ -42,7 +42,7 @@
 // ---------------------------------------------------------
 // "PHP QR Code encoder"
 // License: GNU-LGPLv3
-// Copyright (C) 2010 by Dominik Dzienia <deltalab at poczta dot f>
+// Copyright (C) 2010 by Dominik Dzienia <deltalab at poczta dot fm>
 // http://phpqrcode.sourceforge.net/
 // https://sourceforge.net/projects/phpqrcode/
 //
@@ -1805,7 +1805,7 @@ if (!class_exists('QRcode', false)) {
 		 */
 		 protected function checkModeAn($size, $data) {
 			for ($i=0; $i<$size; ++$i) {
-				if ($this->lookAnTable(ord($data[$i])) == false) {
+				if ($this->lookAnTable(ord($data[$i])) == -1) {
 					return false;
 				}
 			}

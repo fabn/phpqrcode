@@ -36,8 +36,8 @@
  
 
 /*
- * Version: 1.1.1
- * Build: 2010032405
+ * Version: 1.1.2
+ * Build: 2010032722
  */
 
 
@@ -1452,7 +1452,7 @@
         public static function checkModeAn($size, $data)
         {
             for($i=0; $i<$size; $i++) {
-                if (self::lookAnTable(ord($data[$i])) == false) {
+                if (self::lookAnTable(ord($data[$i])) == -1) {
                     return false;
                 }
             }

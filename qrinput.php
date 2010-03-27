@@ -439,7 +439,7 @@
         public static function checkModeAn($size, $data)
         {
             for($i=0; $i<$size; $i++) {
-                if (self::lookAnTable(ord($data[$i])) == false) {
+                if (self::lookAnTable(ord($data[$i])) == -1) {
                     return false;
                 }
             }
