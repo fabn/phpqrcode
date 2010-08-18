@@ -498,7 +498,7 @@
                 <style>
                     .m { background-color: white; }
                 </style>
-                <?
+                <?php
                     echo '<pre><tt><br/ ><br/ ><br/ >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
                     echo join("<br/ >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", $frame);
                     echo '</tt></pre><br/ ><br/ ><br/ ><br/ ><br/ ><br/ >';
@@ -530,7 +530,7 @@
                     .x { background-color: pink; }
                     .f { background-color: gold; }
                 </style>
-                <?
+                <?php
                 echo "<pre><tt>";
                 echo join("<br/ >", $frame);
                 echo "</tt></pre>";
