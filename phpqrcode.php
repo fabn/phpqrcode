@@ -36,8 +36,8 @@
  
 
 /*
- * Version: 1.1.3
- * Build: 2010081807
+ * Version: 1.1.4
+ * Build: 2010100721
  */
 
 
@@ -1507,7 +1507,7 @@
          * Validation
          **********************************************************************/
 
-        public function check($mode, $size, $data)
+        public static function check($mode, $size, $data)
         {
             if($size <= 0) 
                 return false;

@@ -494,7 +494,7 @@
          * Validation
          **********************************************************************/
 
-        public function check($mode, $size, $data)
+        public static function check($mode, $size, $data)
         {
             if($size <= 0) 
                 return false;

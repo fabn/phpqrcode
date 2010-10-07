@@ -32,3 +32,7 @@
 * 1.1.3 build 2010081807
 
   - short opening tags replaced with standard ones
+  
+* 1.1.4 build 2010100721
+
+  - added missing static keyword QRinput::check (found by Luke Brookhart, Onjax LLC)
